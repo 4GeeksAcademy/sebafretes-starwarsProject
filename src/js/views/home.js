@@ -20,8 +20,13 @@ export const Home = () => {
 					<h5 className="card-title" style={{ textAlign: 'start' }}>{char.name}</h5>
 					<p className="card-text" style={{ textAlign: 'start' }}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					<div className="d-flex justify-content-between">
-						<Link to={"/single/:${char.uid}"} className="btn btn-primary">Learn more</Link>
-						<button className="rounded-1" style={{ borderColor: '#E8DD2D', background: 'white', fontSize: '1.5rem' }}><ion-icon name="heart-outline" style={{ color: '#E8DD2D' }}></ion-icon></button>
+						<Link to={`/single/:${char.uid}`} className="btn btn-primary">Learn more</Link>
+						<button
+							className="rounded-1"
+							style={{ borderColor: '#E8DD2D', background: 'white', fontSize: '1.5rem' }}
+							onClick={() => { actions.addFavorite() }}>
+							<ion-icon name="heart-outline" style={{ color: '#E8DD2D' }}></ion-icon>
+						</button>
 					</div>
 				</div>
 			</div>

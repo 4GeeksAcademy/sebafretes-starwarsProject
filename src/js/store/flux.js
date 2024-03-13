@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			characters: [],
+			favorites: [],
+
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -24,6 +26,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			addFavorite: () => {
+				console.log('favoritee');
 			}
 		}
 	};
