@@ -27,7 +27,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			addFavorite: () => {
+			addFavorite: async () => {
+				const store = getStore();
+				// const id = store.characters.uid;
+				console.log(store.characters);
+				// const res = await fetch(`https://www.swapi.tech/api/people/${id}`)
 				console.log('favoritee');
 			}
 		}

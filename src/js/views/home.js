@@ -14,7 +14,7 @@ export const Home = () => {
 
 	const characters = store.characters.map((char) => {
 		return (
-			<div key={char.uid} className="card col-3">
+			<div key={char.uid} className="card col-3 mt-2">
 				<img src={`https://starwars-visualguide.com/assets/img/characters/${char.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
 					<h5 className="card-title" style={{ textAlign: 'start' }}>{char.name}</h5>
