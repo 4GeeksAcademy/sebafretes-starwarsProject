@@ -27,12 +27,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			addFavorite: async () => {
+			addFavorite: async (index) => {
 				const store = getStore();
-				// const id = store.characters.uid;
-				console.log(store.characters);
-				// const res = await fetch(`https://www.swapi.tech/api/people/${id}`)
-				console.log('favoritee');
+				// console.log(index);
+				const fav = store.characters.find((char) => {
+					return char.uid === index
+				})
+				setStore({ favorites: [...store.favorites, fav] })
+				// console.log(store.favorites);
+			},
+
+			deleteFavorite: (index) => {
+				const store = getStore();
+				const itemFav = store.favorites.filter((char) => {
+					return char.uid !== index
+				})
+				setStore({ favorites: itemFav })
 			}
 		}
 	};
