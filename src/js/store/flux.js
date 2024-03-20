@@ -25,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const res = await fetch("https://www.swapi.tech/api/species/")
 				const data = await res.json()
 				setStore({ species: data.results })
-				console.log(data.results);
+				// console.log(data.results);
 			},
 
 			addFavorite: async (index) => {
