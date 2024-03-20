@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Context } from "../store/appContext";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export const Characters = () => {
-	// const { store, actions } = useContext(Context);
 	const [character, setCharacter] = useState(null);
 	const { id } = useParams();
 

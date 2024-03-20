@@ -1,43 +1,36 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-
-import { Context } from "../store/appContext";
-
-// import "../../styles/demo.css";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export const Planets = () => {
-	const { store, actions } = useContext(Context);
+	const [planet, setPlanet] = useState(null);
+	const { id } = useParams();
+
+	const fetchEveryPlanet = async () => {
+		const res = await fetch(`https://www.swapi.tech/api/planets/${id}`)
+		const data = await res.json()
+		setPlanet(data.result);
+		console.log(data);
+	}
+
+	useEffect(() => {
+		fetchEveryPlanet();
+	}, [])
+
 
 	return (
-		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-								// Check to see if the background is orange, if so, display the message
-								item.background === "orange" ? (
-									<p style={{ color: item.initial }}>
-										Check store/flux.js scroll to the actions to see the code
-									</p>
-								) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+		<div className="container-fluid vh-auto d-flex align-items-center justify-content-center">
+			<div className="col">
+				<img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top" alt="..." />
+			</div>
+			<div className="col">
+				{
+					planet &&
+					<div className="text-center">
+						<h5 className="card-title text-center" style={{ textAlign: 'start' }}>{planet.properties.name}</h5>
+						<p className="card-text text-center" style={{ textAlign: 'start' }}>{planet.properties.terrain}</p>
+					</div>
+				}
+			</div>
 		</div>
 	);
 };

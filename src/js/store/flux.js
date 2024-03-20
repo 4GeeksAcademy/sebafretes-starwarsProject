@@ -4,30 +4,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters: [],
 			favorites: [],
 			planets: [],
-
+			species: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			loadSomeData: async () => {
+			getCharacters: async () => {
 				const res = await fetch("https://www.swapi.tech/api/people/")
 				const data = await res.json()
 				setStore({ characters: data.results })
 				// console.log(data.results);
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			getPlanets: async () => {
+				const res = await fetch("https://www.swapi.tech/api/planets/")
+				const data = await res.json()
+				setStore({ planets: data.results })
+				// console.log(data);
 			},
+
+			getSpecies: async () => {
+				const res = await fetch("https://www.swapi.tech/api/species/")
+				const data = await res.json()
+				setStore({ species: data.results })
+				console.log(data.results);
+			},
+
 			addFavorite: async (index) => {
 				const store = getStore();
 				// console.log(index);
@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const ifFavoriteAlreadyExists = store.favorites.find((favList) => {
 					return fav === favList;
 				})
-				if(!ifFavoriteAlreadyExists) {
+				if (!ifFavoriteAlreadyExists) {
 					setStore({ favorites: [...store.favorites, fav] });
 				}
 			},
