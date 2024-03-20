@@ -34,8 +34,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const fav = store.characters.find((char) => {
 					return char.uid === index
 				})
-				setStore({ favorites: [...store.favorites, fav] })
-				// console.log(store.favorites);
+				const ifFavoriteAlreadyExists = store.favorites.find((favList) => {
+					return fav === favList;
+				})
+				if(!ifFavoriteAlreadyExists) {
+					setStore({ favorites: [...store.favorites, fav] });
+				}
 			},
 
 			deleteFavorite: (index) => {
