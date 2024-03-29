@@ -33,27 +33,28 @@ export const Characters = () => {
 					</div>
 
 				</div>
+				<hr style={{ color: 'red' }} ></hr>
 				<div className="d-flex justify-content-center text-center">
 					{
 						character &&
 						<>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Name
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.name}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.name}</p>
 							</p>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Birth Year
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.birth_year}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Birth Year
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.birth_year}</p>
 							</p>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Gender
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.gender}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Gender
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.gender}</p>
 							</p>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Height
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.height}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Height
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.height}</p>
 							</p>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Skin Color
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.skin_color}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Skin Color
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.skin_color}</p>
 							</p>
-							<p style={{ color: 'red', fontWeight: '600', marginRight: '2rem' }}>Eye Color
-								<p style={{ color: 'red', fontWeight: '300' }}>{character.properties.eye_color}</p>
+							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Eye Color
+								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.eye_color}</p>
 							</p>
 						</>
 					}
