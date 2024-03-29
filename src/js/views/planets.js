@@ -18,9 +18,9 @@ export const Planets = () => {
 
 
 	return (
-		<div className="container-fluid vh-auto d-flex align-items-center justify-content-center">
-			<div className="col">
-				<img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top" alt="..." />
+		<div className="container-fluid d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>
+			<div className="col text-center">
+				<img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top img-fluid" alt="..." style={{ maxWidth: '50%', height: 'auto' }} />
 			</div>
 			<div className="col">
 				{
