@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: [],
 			planets: [],
 			species: [],
+			prueba: []
 		},
 		actions: {
 			getCharacters: async () => {
