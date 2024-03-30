@@ -15,7 +15,7 @@ export const Navbar = () => {
 			</Link>
 			<div className="dropdown">
 				<button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-					Favorites <span>{store.favorites.length > 0 ? store.favorites.length : ''}</span>
+					Favorites <span style={{ backgroundColor: 'grey', paddingLeft: '0.2rem', paddingRight: '0.2rem', fontWeight: '500' }}>{store.favorites.length}</span>
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 					{store.favorites.length < 1 && <li className="dropdown-item">No Favorites</li>}
