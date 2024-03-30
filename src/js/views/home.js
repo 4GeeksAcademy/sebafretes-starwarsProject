@@ -25,7 +25,7 @@ export const Home = () => {
 				<img src={`https://starwars-visualguide.com/assets/img/characters/${char.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
 					<h5 className="card-title" style={{ textAlign: 'start' }}>{char.name}</h5>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Gender: </p>
+					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Gender:  </p>
 					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Hair color: </p>
 					<p className="card-text" style={{ textAlign: 'start' }}>Eye-color: </p>
 					<div className="d-flex justify-content-between">
@@ -70,8 +70,7 @@ export const Home = () => {
 				<img src={`https://starwars-visualguide.com/assets/img/species/${elem.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
 					<h5 className="card-title" style={{ textAlign: 'start' }}>{elem.name}</h5>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Hair color: </p>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Eye-color: </p>
+					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Classification: </p>
 					<p className="card-text" style={{ textAlign: 'start' }}>Designation: </p>
 					<div className="d-flex justify-content-between">
 						<Link to={`/species/${elem.uid}`} className="btn btn-primary">Learn more</Link>

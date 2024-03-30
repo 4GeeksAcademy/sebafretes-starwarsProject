@@ -5,7 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: [],
 			planets: [],
 			species: [],
-			prueba: []
+			singleSpecie: [],
 		},
 		actions: {
 			getCharacters: async () => {
@@ -13,6 +13,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const data = await res.json()
 				setStore({ characters: data.results })
 				// console.log(data.results);
+			},
+
+			fetchEverySpecie: async (id) => {
+				const res = await fetch(`https://www.swapi.tech/api/species/${id}`)
+				const data = await res.json()
+				setStore({ singleSpecie: data.result });
+				// console.log(data);
 			},
 
 			getPlanets: async () => {
