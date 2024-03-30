@@ -60,7 +60,6 @@ export const Characters = () => {
 					}
 				</div>
 			</div>
-
 		</>
 	);
 };
