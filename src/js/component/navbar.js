@@ -11,7 +11,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar d-flex justify-content-around navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Star Wars</span>
+				<img style={{ width: "5rem" }} src="https://w7.pngwing.com/pngs/723/1016/png-transparent-star-wars-logo-star-wars-text-logo-silhouette.png" />
 			</Link>
 			<div className="dropdown">
 				<button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
