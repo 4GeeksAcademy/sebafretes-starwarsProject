@@ -38,24 +38,24 @@ export const Characters = () => {
 					{
 						character &&
 						<>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.name}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Birth Year
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Birth Year
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.birth_year}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Gender
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Gender
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.gender}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Height
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Height
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.height}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Skin Color
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Skin Color
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.skin_color}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Eye Color
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Eye Color
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{character.properties.eye_color}</p>
-							</p>
+							</div>
 						</>
 					}
 				</div>
