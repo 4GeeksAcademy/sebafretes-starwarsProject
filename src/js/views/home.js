@@ -105,18 +105,18 @@ export const Home = () => {
 	return (
 		<>
 			<div className="mt-5">
-				<h1 style={{ color: 'red', marginLeft: '3rem' }}>Characters</h1>
+				<h1 style={{ color: '#E20B49', marginLeft: '3rem' }}>Characters</h1>
 				<div className="d-flex" style={{ overflowX: "auto", marginLeft: '3rem', marginRight: '3rem' }}>
 					{characters}
 				</div>
 
-				<h1 style={{ color: 'red', marginLeft: '3rem', marginTop: '3rem' }}>Planets</h1>
+				<h1 style={{ color: '#E20B49', marginLeft: '3rem', marginTop: '3rem' }}>Planets</h1>
 				<div className="d-flex" style={{ overflowX: "auto", marginLeft: '3rem', marginRight: '3rem' }}>
 					{eachPlanet}
 				</div>
 
 
-				<h1 style={{ color: 'red', marginLeft: '3rem', marginTop: '3rem' }}>Species</h1>
+				<h1 style={{ color: '#E20B49', marginLeft: '3rem', marginTop: '3rem' }}>Species</h1>
 				<div className="d-flex" style={{ overflowX: "auto", marginLeft: '3rem', marginRight: '3rem' }}>
 					{eachSpecies}
 				</div>
