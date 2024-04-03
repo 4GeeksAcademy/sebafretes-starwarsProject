@@ -103,7 +103,7 @@ export const Home = () => {
 
 
 	return (
-		<>
+		<div className="container">
 			<div className="mt-5">
 				<h1 style={{ color: '#E20B49', marginLeft: '3rem' }}>Characters</h1>
 				<div className="d-flex" style={{ overflowX: "auto", marginLeft: '3rem', marginRight: '3rem' }}>
@@ -121,6 +121,6 @@ export const Home = () => {
 					{eachSpecies}
 				</div>
 			</div>
-		</>
+		</div>
 	)
 };
