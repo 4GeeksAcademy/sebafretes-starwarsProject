@@ -9,7 +9,7 @@ export const Species = () => {
         const res = await fetch(`https://www.swapi.tech/api/species/${id}`)
         const data = await res.json()
         setSpecie(data.result);
-        console.log(data);
+        // console.log(data);
     }
 
     useEffect(() => {
@@ -39,24 +39,24 @@ export const Species = () => {
                     {
                         specie &&
                         <>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.name}</p>
-                            </p>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Average Height
+                            </div>
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Average Height
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.average_height}</p>
-                            </p>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Average Life
+                            </div>
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Average Life
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.average_lifespan}</p>
-                            </p>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Classification
+                            </div>
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Classification
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.classification}</p>
-                            </p>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Designation
+                            </div>
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Designation
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.designation}</p>
-                            </p>
-                            <p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Language
+                            </div>
+                            <div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Language
                                 <p style={{ color: '#E20B49', fontWeight: '400' }}>{specie.properties.language}</p>
-                            </p>
+                            </div>
                         </>
                     }
                 </div>

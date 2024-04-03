@@ -38,24 +38,24 @@ export const Planets = () => {
 					{
 						planet &&
 						<>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Name
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.name}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Climate
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Climate
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.climate}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Population
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Population
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.population}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Orbital Period
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Orbital Period
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.orbital_period}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Rotation Period
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Rotation Period
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.rotation_period}</p>
-							</p>
-							<p style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Diameter
+							</div>
+							<div style={{ color: '#E20B49', fontWeight: '600', marginRight: '2rem' }}>Diameter
 								<p style={{ color: '#E20B49', fontWeight: '400' }}>{planet.properties.diameter}</p>
-							</p>
+							</div>
 						</>
 					}
 				</div>

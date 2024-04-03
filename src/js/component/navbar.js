@@ -22,7 +22,7 @@ export const Navbar = () => {
 					{store.favorites.map((item) => {
 						return (
 							<li className="d-flex justify-content-center" key={item.uid}>
-								<div className="dropdown-item">{item.name}</div>
+								<div className="dropdown-item">{item.properties.name}</div>
 								<button type="button" className="btn" style={{ background: "none" }} onClick={() => { actions.deleteFavorite(item.uid) }}>
 									<ion-icon name="trash-outline"></ion-icon>
 								</button>

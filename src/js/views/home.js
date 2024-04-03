@@ -24,10 +24,15 @@ export const Home = () => {
 			<div key={char.uid} className="card mt-2 col-3 p-2">
 				<img src={`https://starwars-visualguide.com/assets/img/characters/${char.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h5 className="card-title" style={{ textAlign: 'start' }}>{char.name}</h5>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Gender:  </p>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Hair color: </p>
-					<p className="card-text" style={{ textAlign: 'start' }}>Eye-color: </p>
+					{
+						char.properties &&
+						<>
+							<h5 className="card-title" style={{ textAlign: 'start' }}>{char.properties.name}</h5>
+							<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Gender: {char.properties.gender} </p>
+							<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Hair color: {char.properties.hair_color} </p>
+							<p className="card-text" style={{ textAlign: 'start' }}>Eye-color: {char.properties.eye_color} </p>
+						</>
+					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/characters/${char.uid}`} className="btn btn-primary">Learn more</Link>
 						<button
@@ -47,9 +52,14 @@ export const Home = () => {
 			<div key={items.uid} className="card mt-2 col-3 p-2">
 				<img src={`https://starwars-visualguide.com/assets/img/planets/${items.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h5 className="card-title" style={{ textAlign: 'start' }}>{items.name}</h5>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Population: </p>
-					<p className="card-text" style={{ textAlign: 'start' }}>Terrain: </p>
+					{
+						items.properties &&
+						<>
+							<h5 className="card-title" style={{ textAlign: 'start' }}>{items.properties.name}</h5>
+							<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Population: {items.properties.population} </p>
+							<p className="card-text" style={{ textAlign: 'start' }}>Terrain:{items.properties.terrain} </p>
+						</>
+					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/planets/${items.uid}`} className="btn btn-primary">Learn more</Link>
 						{/* <button
@@ -69,9 +79,14 @@ export const Home = () => {
 			<div key={elem.uid} className="card mt-2 col-3 p-2">
 				<img src={`https://starwars-visualguide.com/assets/img/species/${elem.uid}.jpg`} className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h5 className="card-title" style={{ textAlign: 'start' }}>{elem.name}</h5>
-					<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Classification: </p>
-					<p className="card-text" style={{ textAlign: 'start' }}>Designation: </p>
+					{
+						elem.properties &&
+						<>
+							<h5 className="card-title" style={{ textAlign: 'start' }}>{elem.properties.name}</h5>
+							<p className="card-text" style={{ textAlign: 'start', marginBottom: 0 }}>Classification: {elem.properties.classification} </p>
+							<p className="card-text" style={{ textAlign: 'start' }}>Designation: {elem.properties.designation}</p>
+						</>
+					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/species/${elem.uid}`} className="btn btn-primary">Learn more</Link>
 						{/* <button
