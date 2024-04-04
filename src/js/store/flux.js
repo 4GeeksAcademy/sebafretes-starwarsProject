@@ -10,12 +10,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getCharacters: async () => {
 				const store = getStore();
-				const res = await fetch("https://swapi.tech/api/people")
-				const data = await res.json()
-				for (let char of data.results) {
-					const charRes = await fetch(`https://swapi.tech/api/people/${char.uid}`)
-					const charData = await charRes.json()
-					setStore({ characters: [...store.characters, charData.result] })
+				try {
+					const res = await fetch("https://swapi.tech/api/people")
+					const data = await res.json()
+					for (let char of data.results) {
+						const charRes = await fetch(`https://swapi.tech/api/people/${char.uid}`)
+						const charData = await charRes.json()
+						setStore({ characters: [...store.characters, charData.result] })
+					}
+				}
+				catch (error) {
+					console.log(error);
 				}
 			},
 
@@ -51,16 +56,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// console.log(data);
 			},
 
-			addFavorite: async (index) => {
+			addFavorite: async (fav) => {
 				const store = getStore();
-				// console.log(index);
-				const fav = store.characters.find((char) => {
-					return char.uid === index
-				})
-				const ifFavoriteAlreadyExists = store.favorites.find((favList) => {
-					return fav === favList;
-				})
-				if (!ifFavoriteAlreadyExists) {
+
+				const ifFavoriteAlreadyExists = store.favorites.some((item) => fav._id == item._id);
+
+				if (ifFavoriteAlreadyExists) {
+					let newFav = store.favorites.filter((item) => fav._id != item._id)
+					setStore({ favorites: newFav });
+				}
+				else {
 					setStore({ favorites: [...store.favorites, fav] });
 				}
 			},

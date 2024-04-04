@@ -7,18 +7,6 @@ export const Home = () => {
 
 	const { store, actions } = useContext(Context);
 
-	// useEffect(() => {
-	// 	actions.getCharacters();
-	// }, []);
-
-	// useEffect(() => {
-	// 	actions.getPlanets();
-	// }, []);
-
-	// useEffect(() => {
-	// 	actions.getSpecies();
-	// }, []);
-
 	const characters = store.characters.map((char) => {
 		return (
 			<div key={char.uid} className="card mt-2 col-3 p-2">
@@ -38,7 +26,7 @@ export const Home = () => {
 						<button
 							className="btn btn-warning"
 							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(char.uid) }}>
+							onClick={() => { actions.addFavorite(char) }}>
 							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
 						</button>
 					</div>
@@ -62,12 +50,12 @@ export const Home = () => {
 					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/planets/${items.uid}`} className="btn btn-primary">Learn more</Link>
-						{/* <button
+						<button
 							className="btn btn-warning"
 							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(items.uid) }}>
+							onClick={() => { actions.addFavorite(items) }}>
 							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
-						</button> */}
+						</button>
 					</div>
 				</div>
 			</div>
@@ -89,12 +77,12 @@ export const Home = () => {
 					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/species/${elem.uid}`} className="btn btn-primary">Learn more</Link>
-						{/* <button
+						<button
 							className="btn btn-warning"
 							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(items.uid) }}>
+							onClick={() => { actions.addFavorite(elem) }}>
 							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
-						</button> */}
+						</button>
 					</div>
 				</div>
 			</div>
@@ -104,7 +92,7 @@ export const Home = () => {
 
 	return (
 		<div className="container">
-			<div className="mt-5">
+			<div className="mt-1">
 				<h1 style={{ color: '#E20B49', marginLeft: '3rem' }}>Characters</h1>
 				<div className="d-flex" style={{ overflowX: "auto", marginLeft: '3rem', marginRight: '3rem' }}>
 					{characters}
