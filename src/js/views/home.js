@@ -7,17 +7,17 @@ export const Home = () => {
 
 	const { store, actions } = useContext(Context);
 
-	useEffect(() => {
-		actions.getCharacters();
-	}, []);
+	// useEffect(() => {
+	// 	actions.getCharacters();
+	// }, []);
 
-	useEffect(() => {
-		actions.getPlanets();
-	}, []);
+	// useEffect(() => {
+	// 	actions.getPlanets();
+	// }, []);
 
-	useEffect(() => {
-		actions.getSpecies();
-	}, []);
+	// useEffect(() => {
+	// 	actions.getSpecies();
+	// }, []);
 
 	const characters = store.characters.map((char) => {
 		return (
