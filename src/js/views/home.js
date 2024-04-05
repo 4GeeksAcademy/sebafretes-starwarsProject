@@ -23,12 +23,21 @@ export const Home = () => {
 					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/characters/${char.uid}`} className="btn btn-primary">Learn more</Link>
-						<button
-							className="btn btn-warning"
-							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(char) }}>
-							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
-						</button>
+						{!store.favorites.includes(char) ?
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
+								onClick={() => { actions.addFavorite(char) }}>
+								<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
+							</button>
+							:
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem', backgroundColor: '#1C1B1B' }}
+								onClick={() => { actions.addFavorite(char) }}>
+								<ion-icon name="heart-outline" style={{ color: '#E8BB00' }}></ion-icon>
+							</button>
+						}
 					</div>
 				</div>
 			</div>
@@ -50,12 +59,21 @@ export const Home = () => {
 					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/planets/${items.uid}`} className="btn btn-primary">Learn more</Link>
-						<button
-							className="btn btn-warning"
-							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(items) }}>
-							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
-						</button>
+						{!store.favorites.includes(items) ?
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
+								onClick={() => { actions.addFavorite(items) }}>
+								<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
+							</button>
+							:
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem', backgroundColor: '#1C1B1B' }}
+								onClick={() => { actions.addFavorite(items) }}>
+								<ion-icon name="heart-outline" style={{ color: '#E8BB00' }}></ion-icon>
+							</button>
+						}
 					</div>
 				</div>
 			</div>
@@ -77,12 +95,21 @@ export const Home = () => {
 					}
 					<div className="d-flex justify-content-between">
 						<Link to={`/species/${elem.uid}`} className="btn btn-primary">Learn more</Link>
-						<button
-							className="btn btn-warning"
-							style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
-							onClick={() => { actions.addFavorite(elem) }}>
-							<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
-						</button>
+						{!store.favorites.includes(elem) ?
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem' }}
+								onClick={() => { actions.addFavorite(elem) }}>
+								<ion-icon name="heart-outline" style={{ color: 'white' }}></ion-icon>
+							</button>
+							:
+							<button
+								className="btn btn-warning"
+								style={{ borderColor: '#E8DD2D', fontSize: '1.5rem', backgroundColor: '#1C1B1B' }}
+								onClick={() => { actions.addFavorite(elem) }}>
+								<ion-icon name="heart-outline" style={{ color: '#E8BB00' }}></ion-icon>
+							</button>
+						}
 					</div>
 				</div>
 			</div>
